@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load  static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammary Tense</title>
+    <link rel="icon" href="{%static 'img/gem.svg'%}">
+            <!-- Font Awesome icons (free version)-->    
+            <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+            <!-- Google fonts-->
+            <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+</head>
+<style>
+#logo{
+    font: size 35px;
+    color: #b23e4a;
+    font-weight: 700;
+}    
+#i
+{
+  color: #b23e4a;
+}
+#color{
+color: #b23e4a;}
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color:lavender;
+  }
+  .about-section {
+    padding-top: 10rem;
+    background: linear-gradient(to bottom, lavender 0%, rgba(136, 125, 125, 0.9) 75%, rgba(128, 103, 103, 0.8) 100%);
+
+  }
+  .pic {
+  position: relative;
+  text-align: center;
+  color:#b23e4a;
+
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: dimgrey;
+  font-weight:bold;
+  font-size :20px;
+}
+.card-body
+{
+  background-color: lavender;
+  }
+  #hh2{
+    color: aliceblue;
+    background-color: slategrey;
+    text-align: left;
+    
+  }
+  .signup-section {
+  padding: 10rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("{% static 'img/library-869061_1920.jpg' %}");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+.signup-section .form-signup input {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  height: auto;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 80%;
+  letter-spacing: 0.15rem;
+  border: 0;
+}
+
+.contact-section {
+  padding-top: 5rem;
+  background-color:black;
+}
+.contact-section .card {
+  border: 0;
+  border-bottom: 0.25rem solid #64a19d;
+}
+.contact-section .card h4, .contact-section .card .h4 {
+  font-size: 0.8rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+.contact-section .card hr {
+  border-color: #64a19d;
+  border-width: 0.25rem;
+  width: 3rem;
+}
+.contact-section .social {
+  margin-top: 5rem;
+
+
+}
+.contact-section .social a {
+  text-align: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  line-height: 3rem;
+  color: rgba(255, 255, 255, 0.3);
+
+}
+.contact-section .social a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.contact-section .social a:active {
+  color: #fff;
+}
+
+
+.footer {
+  padding: 5rem 0;
+}
+.btn {
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  padding: 1.25rem 2rem;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  border: 0;
+  
+}
+.btn-primary {
+  color: #fff;
+  background-color: #64a19d;
+  border-color: #64a19d;
+}
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+</style>
+<body id="page-top">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#page-top"><img src="{%static 'img/logo.svg'%}" alt="" width="30" height="24" class="d-inline-block align-text-top"><span id="logo">GRAMMARY TENSE</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="logo">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto" >
+                    <li class="nav-item"><a class="nav-link" id="i"href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" id="i" href="#signup">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" id="i" href="{% url 'exercises' %}">Exercises</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!---carousel slider-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" id="carouselhero">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'img/lukas-blazek-GnvurwJsKaY-unsplash-1.jpg' %}" class="d-block w-100" height="80%" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/people-2557396_1920.jpg' %}" class="d-block w-100" height="80%" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/computer-1185626_1920.jpg' %}" class="d-block w-100 " height="80%" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/compare-fibre-JiOFFI3W7IA-unsplash.jpg' %}" class="d-block w-100" height="80%" alt="...">
+          </div>
+        </div>
+      </div>
+      <!-- About --> 
+      <section class="projects-section bg-light"id="about" >
+            <div class="container px-4 px-lg-5">
+                
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{%static 'img/girl-2771936.jpg'%} "alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                          <h4 class="text-black-50 mb-0" >About This Website</h4>
+                          <p class="text-black-50 mb-0">Grammary Tense is a website that provides comprehensive lessons and exercises on English grammar tenses. It covers all the major tenses such as present simple, present continuous, past simple, past continuous, future simple, future continuous and more. The lessons are designed to help students understand the structure and usage of each tense in English. The exercises are designed to test users’ understanding of each tense and help them practice using them correctly. The website also includes helpful tips for improving English grammar skills.</p>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+       </section>  
+       <!--grammer-->
+       <section class="pt-4"  >
+        <div class="container px-lg-5">
+           
+            <div class="row gx-lg-5"style="padding: 5rem 0;">
+                 <h2 id="hh2">What would you like to learn today? </h2>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"></div>
+                            <div class="pic">
+                                <a href="{% url 'present simple' %}">
+                                 <img src="{% static 'img/texture/kilimanjaro-studioz-04CYx6p2rJ4-unsplash.jpg' %}"class="rounded img-fluid" alt="..." style="width:100%; height: 200px;">
+                                 <div style="font-weight: 1000; font-size:x-large;" class="centered">Present Simple</div>
+                                </a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"></div>
+                              <div class="pic">
+                                   <a href="{% url 'present continuous' %}">
+                                     <img src="{% static 'img/texture/kseniya-lapteva--1W4pTCzBSY-unsplash.jpg' %}" class="rounded img-fluid" alt="..." style="width:100%; height: 200px;">
+                                     <div style="font-weight: 1000; font-size:x-large;" class="centered">Present Continuous</div>
+                                    </a>
+                              </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"></div>
+                               <div class="pic">
+                                   <a href="{% url 'present perfect' %}">
+                                      <img src="{% static 'img/texture/kseniya-lapteva-0YuATzSpSZw-unsplash.jpg' %}" class="rounded img-fluid" alt="..." style="width:100%; height: 200px;">
+                                      <div style="font-weight: 1000; font-size:x-large;" class="centered">Present Perfect</div>
+                                  </a>
+                               </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"></div>
+                               <div class="pic">
+                                   <a href="{% url 'past simple' %}">
+                                      <img src="{% static 'img/texture/kseniya-lapteva-tU1q_KMMXp8-unsplash.jpg' %}" class="rounded img-fluid" alt="..." style="width:100%; height: 200px;">
+                                     <div style="font-weight: 1000; font-size:x-large;" class="centered">Past Simple</div>
+                                    </a>
+                               </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"></div>
+                               <div class="pic">
+                                  <a href="{% url 'past continuous' %}">
+                                      <img src="{% static 'img/texture/kseniya-lapteva-Z0IkLSHprtU-unsplash.jpg' %}" class="rounded img-fluid" alt="..." style="width:100%; height: 200px;">
+                                      <div style="font-weight: 1000; font-size:x-large;" class="centered">Past continuous</div>
+                                   </a>
+                              </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"></div>
+                              <div class="pic">
+                                 <a href="{% url 'past perfect' %}">
+                                     <img src="{% static 'img/texture/kseniya-lapteva-D8Ivhfqm5xM-unsplash.jpg' %}" class="rounded img-fluid" alt="..." style="width:100%; height: 200px;">
+                                     <div style="font-weight: 1000; font-size:x-large;" class="centered">Past Perfect</div>
+                                </a>
+                              </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xxl-4 mb-5">
+                    <div class="card bg-light border-0 h-100">
+                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"></div>
+                               <div class="pic">
+                                  <a href="{% url 'future simple' %}">
+                                      <img src="{% static 'img/texture/kseniya-lapteva-rpgqaOadMmo-unsplash.jpg' %}" class="rounded img-fluid" alt="..." style="width:100%; height: 200px;">
+                                      <div style="font-weight: 1000; font-size:x-large;" class="centered">Future Simple </div>
+                                   </a>
+                              </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+                       
+                        <form class="form-signup" id="contactForm" >
+                            <!-- Email address input-->
+                            <div class="row input-group-newsletter">
+                                <div class="col"><input class="form-control"  type="email" placeholder="Enter Email Address..."  /></div>
+                                <div class="col-auto"><button style="background-color: #64a19d;" class="btn btn-primary " id="submitButton" type="submit">Notify Me!</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section ">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div style="background-color: white;" class="card-body text-center">
+                                <i id="color" class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr style="color: dimgrey;" class="my-4 mx-auto" />
+                                <div class="small text-black-50">University of Kalamoon , Deratiah</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div style="background-color: white;" class="card-body text-center">
+                                <i id="color" class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr style="color: dimgrey;" class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a style="color: #64a19d"  href="#!">hello@yourdomain.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div style="background-color: white;" class="card-body text-center">
+                                <i id="color" class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr style="color: dimgrey;" class="my-4 mx-auto" />
+                                <div class="small text-black-50">+963 11 78 33 999</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i id="color" class="fab fa-twitter"></i></a>
+                    <a class="mx-2" href="#!"><i id="color" class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i id="color" class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50" ><div id="color" class="container px-4 px-lg-5">Copyright &copy; Grammary Tense 2023</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>

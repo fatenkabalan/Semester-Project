@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div.content {
+            margin-left: 25px;
+            padding: 20px 50px;
+            height: 1000px;
+            margin-top: 50px;
+
+          }
+        h1{
+            background-color: #555;
+            color:white;
+            padding: 5px;
+            border: 1px solid black;
+            
+          }
+        p{
+            color: #555;
+            margin-left: 40px;
+            font-size:medium;
+          }
+        h3{
+            color: #b23e4a;
+            padding: 5px;
+            margin-left: 20px;
+           
+
+          }
+        #sm{
+             font-size:medium;
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+          }
+          #text{
+            { width: 2px; }
+          }
+          #font{
+            color:white;
+          }
+    </style>
+    <script>
+        javascript
+        $(document).ready(function() {
+          $('#print-btn').click(function() {
+            window.print();
+          });
+        });
+        $('.alert').alert()
+    </script>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
+    <title>exercises</title>
+    <link rel="icon" href="{%static 'img/gem.svg'%}">
+</head>
+<body>
+
+    <div class="content">
+        {% block content %}
+        <h1>Exercises</h1>
+        <form method="POST"   action= "{% url 'check' %}" >
+            {% csrf_token %}
+         
+        <br>
+        <h3 id="sm">Complete the sentences with the correct forms of the verbs in brackets</h3>
+            {% for key,value in sen.items %}
+                {%if key == "s"%}
+                    {% for v in value %}
+                        <p>   
+                            <span>&#10148;</span>
+                            {{v.0}}
+                            <input type=""  name="complete_list" id="text">
+                            ({{v.1}})
+                            {{v.2}}
+                        </p>
+                    {% endfor %}
+                {%endif%}
+            {% endfor %}
+
+        <br>
+        <h3 id="sm">For the questions below, please choose the best option to complete the sentence</h3>
+            {% for key,value in sen.items %}
+                {%if key == "c"%}
+                    {% for v in value %}
+                        <p>
+                            <span>&#10148;</span>
+                            {{v.0}}
+                            ........
+                            {{v.1}}
+                            <br>
+                            <input type="radio" name="{{v.4}}" value="{{v.2}}" />
+                            <lable id="lable">
+                            {{v.2}}
+                            </lable>
+                            <input type="radio" name="{{v.4}}" value="{{v.3}}" />
+                            <lable id="lable">
+                            {{v.3}}
+                            </lable>
+                        </p>
+                    {% endfor %}
+                {%endif%}
+            {% endfor %}
+
+        <br>
+        <h3 id="sm">Select the correct tense for the following sentences</h3>
+            {% for key,value in sen.items %}
+                {%if key == "t"%}
+                    {% for v in value %}
+                        <p>
+                            <span>&#10148;</span>
+                            {{v}}<br>
+                            <select class="form-select" name="tense" id="tense">
+                                <option selected><p>Open this select menu</p></option>
+                                <option value="present simple"><p>present simple</p></option>
+                                <option value="present perfect">present perfect</option>
+                                <option value="present continuous">present continuous</option>
+                                <option value="past simple">past simple</option>
+                                <option value="past perfect">past perfect</option>
+                                <option value="past continuous">past continuous</option>
+                                <option value="future simple">future simple</option>
+
+                              </select>
+                        </p>
+                    {% endfor %}
+                {%endif%}
+            {% endfor %}
+
+
+        <br>
+        <h3 id="sm">Arrange the following words to make meaningful sentences</h3>
+            {% for key,value in sen.items %}
+                {%if key == "a"%}
+                    {% for v in value %}
+                        <p>
+                            <span>&#10148;</span>
+                            {{v}}<br>
+                            <input type="text" name="arrange_sen" >
+                            </input>
+                        </p>
+                    {% endfor %}
+                {%endif%}
+            {% endfor %}
+
+        <br>
+        <h3 id="sm">Change the following sentences from Present Continuous Tense into Simple Present Tense </h3>    
+            {% for key,value in sen.items %}
+                {%if key == "r"%}
+                    {% for v in value %}
+                        <p>
+                            <span>&#10148;</span>
+                            {{v}}<br>
+                            <input type="text" name="change_sen" >
+                            </input>
+                        </p>
+                    {% endfor %}
+                {%endif%}
+            {% endfor %}
+
+        <br>
+        <hr>
+        <span>
+         <button type="submit" class="btn btn-danger" >CHECK ANSWERS >></button></span>
+        <button  class="btn btn-danger" ><a id="font" href="{% url 'index' %}">RETURN HOME</a></button>
+
+
+        <br>
+        <br>
+        <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+            <strong>CHECK OUT!</strong> reload the page for different exercises.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </form>
+
+        {% endblock content %}
+    </div>
+
+</body>
+
+</html>

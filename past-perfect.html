@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load  static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Perfect</title>
+    <link rel="icon" href="{%static 'img/gem.svg'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%} ">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style_page.css'%} ">
+
+</head>
+<body>
+    <!-- The sidebar -->
+    <div class="sidebar">
+        <a class="active" href="{% url 'index' %}">Grammary Tense</a>
+        <a href="{% url 'present simple' %}">Present Simple</a>
+        <a href="{% url 'present continuous' %}">Present Continuous</a>
+        <a href="{% url 'present perfect' %}">Present Perfect</a>
+        <a href="{% url 'past simple' %}">Past Simple</a>
+        <a href="{% url 'past continuous' %}">Past continuous</a>
+        <a href="{% url 'past perfect' %}">Past Perfect</a>
+        <a href="{% url 'future simple' %}">Future Simple </a>
+        
+
+    </div> 
+    <!-- Page content -->
+    <div class="content">
+        <h1>Past Perfect</h1>
+        <h3>Form</h3>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPSMT';">It is formed with the auxiliary verb "had" + past participle (-ed ending for regular verbs, e.g. worked, travelled, tried, different forms for irregular verbs, e.g. written, made, sung): </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">I had done, I had not done (I hadn't done), Had I done? Had I not done? (Hadn't I done?) </span></p>
+        <h3>Use</h3>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPSMT';">1. We use the past perfect to make it clear that an action was completed before another action in the past. </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">The door bell rang at last. I had been in the room since breakfast. </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPSMT';">(The bell rang at noon. I came in the morning - before that.) </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">When I arrived there Sarah had already left. </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPSMT';">(I arrived after lunch. Sara went before lunch.) </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">I was so hungry! I had not eaten anything since the morning. </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPSMT';">(It was late at night.)<br /> 2. It is used to refer to an activity that was completed before a point of time in the past. </span></p>
+        <p><span style="font-size: 11.000000pt; font-family: 'TimesNewRomanPS'; font-style: italic;">In 2005 I had lived in the same place for ten years.<br /> Had you ever travelled by plane before your holiday in Spain? </span></p>
+        <h3>watch the next video please!</h3>
+        <video  style="margin-left: 25px;" controls src="{%static 'video/Past Perfect Tense.mp4'%}" width="400"></video>       
+        <hr>
+        <a href="{% url 'exercises' %}"><button type="button" class="btn btn-danger" >Practice Grammer ></button></a>
+        <footer class="footer bg-black small text-center text-white-50" ><div id="color" class="container px-4 px-lg-5">Copyright &copy; Grammary Tense 2023</div></footer>
+
+    </div>  
+</body>
+</html>
